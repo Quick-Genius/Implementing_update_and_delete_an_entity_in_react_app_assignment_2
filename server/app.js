@@ -2,6 +2,7 @@ const path = require('node:path');
 const fs = require('node:fs');
 const express = require('express');
 const cors = require('cors');
+require("dotenv").config();
 
 const PORT = process.env.SECONDARY_PUBLIC_PORT || 8000;
 
@@ -113,5 +114,5 @@ app.delete('/doors/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`🚀 server is running on ${PORT}`);
+    console.log(`🚀 server is running on http://localhost:${PORT}`);
 });
